@@ -218,8 +218,7 @@ var CountryDropdown = function (_Component) {
 				return React__default.createElement(
 					'option',
 					{ value: valueType === C.DISPLAY_TYPE_SHORT ? countrySlug : countryName, key: countrySlug + nr },
-					labelType === C.DISPLAY_TYPE_SHORT ? countrySlug : countryName,
-					
+					labelType === C.DISPLAY_TYPE_SHORT ? countrySlug : countryName
 				);
 			});
 		}
