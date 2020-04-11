@@ -8,7 +8,7 @@ export default class CountryDropdown extends Component {
 
 	constructor (props) {
 		super(props);
-
+		let test = 'test';
 		this.state = {
 			countries: helpers.filterCountries(CountryRegionData, props.priorityOptions, props.whitelist, props.blacklist, props.priorityRepeat)
 		};
