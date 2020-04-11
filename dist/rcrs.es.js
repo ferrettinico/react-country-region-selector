@@ -189,6 +189,8 @@ var CountryDropdown = function (_Component) {
 
 		var _this = possibleConstructorReturn(this, (CountryDropdown.__proto__ || Object.getPrototypeOf(CountryDropdown)).call(this, props));
 
+		var test = 'test';
+		console.log(test);
 		_this.state = {
 			countries: filterCountries(CountryRegionData, props.priorityOptions, props.whitelist, props.blacklist, props.priorityRepeat)
 		};
