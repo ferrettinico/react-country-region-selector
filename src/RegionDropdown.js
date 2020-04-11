@@ -81,6 +81,10 @@ export default class RegionDropdown extends PureComponent {
 	getRegionList () {
 		const { labelType, valueType } = this.props;
 		return this.state.regions.map(({ regionName, regionShortCode }) => {
+			//Hack as the list doesn't update from github!
+			if(regionName.indexOf === ', City of')
+				regionName='London';
+
 			const label = (labelType === C.DISPLAY_TYPE_FULL) ? regionName : regionShortCode;
 			const value = (valueType === C.DISPLAY_TYPE_FULL) ? regionName : regionShortCode;
 			return <option value={value} key={regionName}>{label}</option>;

@@ -196,8 +196,6 @@ var CountryDropdown = function (_Component) {
 
 		var _this = possibleConstructorReturn(this, (CountryDropdown.__proto__ || Object.getPrototypeOf(CountryDropdown)).call(this, props));
 
-		var test = 'test';
-		console.log(test);
 		_this.state = {
 			countries: filterCountries(CountryRegionData, props.priorityOptions, props.whitelist, props.blacklist, props.priorityRepeat)
 		};
@@ -436,6 +434,9 @@ var RegionDropdown = function (_PureComponent) {
 			return this.state.regions.map(function (_ref) {
 				var regionName = _ref.regionName,
 				    regionShortCode = _ref.regionShortCode;
+
+				//Hack as the list doesn't update from github!
+				if (regionName.indexOf === ', City of') regionName = 'London';
 
 				var label = labelType === C.DISPLAY_TYPE_FULL ? regionName : regionShortCode;
 				var value = valueType === C.DISPLAY_TYPE_FULL ? regionName : regionShortCode;
